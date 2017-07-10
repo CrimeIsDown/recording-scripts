@@ -1,0 +1,114 @@
+[
+  {
+    "name": "CPD Zone 1 - Districts 16 and 17",
+    "description": "460.475MHz",
+    "frequency": "460.475MHz",
+    "slug": "zone1",
+    "audio": "Line 1 (Virtual Audio Cable)"
+  },
+  {
+    "name": "CPD Zone 2 - District 19",
+    "description": "19th District - Town Hall: Serving Uptown, south Lincoln Square, North Center, and Lakeview (including Boystown).",
+    "frequency": "460.050MHz",
+    "slug": "zone2",
+    "audio": "Line 2 (Virtual Audio Cable)"
+  },
+  {
+    "name": "CPD Zone 3 - Districts 12 and 14",
+    "description": "Near West Side, Wicker Park, Ukranian Village, West Town, Logan Square, Bucktown, UIC areas.",
+    "frequency": "460.225MHz",
+    "slug": "zone3",
+    "audio": "Line 3 (Virtual Audio Cable)"
+  },
+  {
+    "name": "CPD Zone 4 - Districts 1 and 18",
+    "description": "1st District-Central..18th District-Near North.. Zone cover Downtown Chicago, Lake Shore Drive, Mag Mile, Navy Pier, Central Detention",
+    "frequency": "460.150MHz",
+    "slug": "zone4",
+    "audio": "Line 4 (Virtual Audio Cable)"
+  },
+  {
+    "name": "CPD Zone 5 - District 2",
+    "description": "2nd District - Wentworth: Serving Douglas, Oakland, Grand Boulevard, Kenwood, Washington Park, and Hyde Park.",
+    "frequency": "460.500MHz",
+    "slug": "zone5",
+    "audio": "Line 5 (Virtual Audio Cable)"
+  },
+  {
+    "name": "CPD Zone 6 - Districts 7 and 8",
+    "description": "7th District – Englewood & 8th District – Chicago Lawn",
+    "frequency": "460.400MHz",
+    "slug": "zone6",
+    "audio": "Line 6 (Virtual Audio Cable)"
+  },
+  {
+    "name": "CPD Zone 7 - District 3",
+    "description": "Grand Crossing",
+    "frequency": "460.075MHz",
+    "slug": "zone7",
+    "audio": "Line 7 (Virtual Audio Cable)"
+  },
+  {
+    "name": "CPD Zone 8 - Districts 4 and 6",
+    "description": "District 4 - South Chicago &amp; District 6 - Gresham.",
+    "frequency": "460.200MHz",
+    "slug": "zone8",
+    "audio": "Line 8 (Virtual Audio Cable)"
+  },
+  {
+    "name": "CPD Zone 9 - Districts 5 and 22",
+    "description": "5th District.. Calumet / Area South.. 22nd District  Morgan Park",
+    "frequency": "460.025MHz",
+    "slug": "zone9",
+    "audio": "Line 9 (Virtual Audio Cable)"
+  },
+  {
+    "name": "CPD Zone 10 - Districts 10 and 11",
+    "description": "10th District - Ogden: Serving North Lawndale, South Lawndale, and the Lower West Side; 11th District - Harrison: Serving West Garfield Park, East Garfield Park, and the southern half of Humboldt Park.",
+    "frequency": "460.100MHz",
+    "slug": "zone10",
+    "audio": "Line 10 (Virtual Audio Cable)"
+  },
+  {
+    "name": "CPD Zone 11 - Districts 20 and 24",
+    "description": "Dist. 20 and 24, serving the far North side of Chicago, including community areas of Rodgers Park, West Ridge, and Edgewater",
+    "frequency": "460.375MHz",
+    "slug": "zone11",
+    "audio": "Line 11 (Virtual Audio Cable)"
+  },
+  {
+    "name": "CPD Zone 12 - Districts 15 and 25",
+    "description": "Dist. 15 and 25, serving the far West side of Chicago, including community areas of Austin, Hermosa, and Belmont Cragin.",
+    "frequency": "460.425MHz",
+    "slug": "zone12",
+    "audio": "Line 12 (Virtual Audio Cable)"
+  },
+  {
+    "name": "CPD Zone 13 - District 9",
+    "description": "9th District - Deering: Serving Bridgeport, McKinley Park, Brighton Park, New City, and Gage Park.",
+    "frequency": "460.450MHz",
+    "slug": "zone13",
+    "audio": "Line 13 (Virtual Audio Cable)"
+  },
+  {
+    "name": "CPD Citywide 1",
+    "description": "",
+    "frequency": "460.125MHz",
+    "slug": "citywide1",
+    "audio": "Line 14 (Virtual Audio Cable)"
+  },
+  {
+    "name": "CPD Citywide 2",
+    "description": "",
+    "frequency": "460.175MHz",
+    "slug": "citywide2",
+    "audio": "Line 15 (Virtual Audio Cable)"
+  },
+  {
+    "name": "CPD Citywide 6",
+    "description": "",
+    "frequency": "460.250MHz",
+    "slug": "citywide6",
+    "audio": "Line 16 (Virtual Audio Cable)"
+  }
+]
