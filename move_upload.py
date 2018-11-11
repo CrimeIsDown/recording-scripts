@@ -62,7 +62,7 @@ def upload_recordings(day_path):
         'google:crimeisdown-audio/'+day_path.replace(os.sep, '/'),
         '--transfers', '1',
         '--include', '*.aac.xz',
-        # '--bwlimit', '100k',
+        '--bwlimit', '100k',
         '-v'
     ]
     subprocess.run(rclone_args, shell=True)

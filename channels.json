@@ -25,21 +25,24 @@
     "description": "1st District-Central..18th District-Near North.. Zone cover Downtown Chicago, Lake Shore Drive, Mag Mile, Navy Pier, Central Detention",
     "frequency": "460.150MHz",
     "slug": "zone4",
-    "audio": "Line 4 (Virtual Audio Cable)"
+    "audio": "Line 4 (Virtual Audio Cable)",
+    "icecast_url": "icecast://source:PASSWORD@audio3..broadcastify.com:80/00g3yv7w49xc"
   },
   {
     "name": "CPD Zone 5 - District 2",
     "description": "2nd District - Wentworth: Serving Douglas, Oakland, Grand Boulevard, Kenwood, Washington Park, and Hyde Park.",
     "frequency": "460.500MHz",
     "slug": "zone5",
-    "audio": "Line 5 (Virtual Audio Cable)"
+    "audio": "Line 5 (Virtual Audio Cable)",
+    "icecast_url": "icecast://source:PASSWORD@audio1..broadcastify.com:80/khtxwn0r1v53"
   },
   {
     "name": "CPD Zone 6 - Districts 7 and 8",
     "description": "7th District – Englewood & 8th District – Chicago Lawn",
     "frequency": "460.400MHz",
     "slug": "zone6",
-    "audio": "Line 6 (Virtual Audio Cable)"
+    "audio": "Line 6 (Virtual Audio Cable)",
+    "icecast_url": "icecast://source:PASSWORD@audio3..broadcastify.com:80/pf8swnvghx31"
   },
   {
     "name": "CPD Zone 7 - District 3",
@@ -67,7 +70,8 @@
     "description": "10th District - Ogden: Serving North Lawndale, South Lawndale, and the Lower West Side; 11th District - Harrison: Serving West Garfield Park, East Garfield Park, and the southern half of Humboldt Park.",
     "frequency": "460.100MHz",
     "slug": "zone10",
-    "audio": "Line 10 (Virtual Audio Cable)"
+    "audio": "Line 10 (Virtual Audio Cable)",
+    "icecast_url": "icecast://source:PASSWORD@audio9..broadcastify.com:80/716183595"
   },
   {
     "name": "CPD Zone 11 - Districts 20 and 24",
@@ -88,7 +92,8 @@
     "description": "9th District - Deering: Serving Bridgeport, McKinley Park, Brighton Park, New City, and Gage Park.",
     "frequency": "460.450MHz",
     "slug": "zone13",
-    "audio": "Line 13 (Virtual Audio Cable)"
+    "audio": "Line 13 (Virtual Audio Cable)",
+    "icecast_url": "icecast://source:PASSWORD@audio9..broadcastify.com:80/539709865"
   },
   {
     "name": "CPD Citywide 1",
