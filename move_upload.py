@@ -4,7 +4,7 @@ import json
 import os
 import re
 from time import sleep
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 import lzma
 import subprocess
 import multiprocessing.dummy as mp
@@ -45,8 +45,8 @@ def compress_file(subdir, file):
             print('Could not compress '+path)
 
 
-def compress_recordings(day_path):
-    for subdir, dirs, files in os.walk(os.path.join(recording_path, day_path)):
+def compress_recordings(path):
+    for subdir, dirs, files in os.walk(path):
         pool = mp.Pool()
         partial_compress_file = partial(compress_file, subdir)
         pool.map(partial_compress_file, files)
@@ -54,14 +54,14 @@ def compress_recordings(day_path):
         pool.join()
 
 
-def upload_recordings(day_path):
+def upload_recordings(path):
     rclone_args = [
         'rclone',
         'copy',
-        os.path.join(recording_path, day_path),
-        'google:crimeisdown-audio/'+day_path.replace(os.sep, '/'),
+        path,
+        'google:crimeisdown-audio/'+path.replace(recording_path + os.sep, '').replace(os.sep, '/'),
         '--transfers', '1',
-        '--include', '*.aac.xz',
+        '--include', '*.aac.xz', '--include', '*.ogg',
         '--bwlimit', '100k',
         '-v'
     ]
@@ -69,15 +69,28 @@ def upload_recordings(day_path):
 
 
 recording_path = 'R:\\recordings'
-today_path = date.today().strftime('%Y'+os.sep+'%m'+os.sep+'%d')
-yesterday_path = (date.today() - timedelta(1)).strftime('%Y'+os.sep+'%m'+os.sep+'%d')
 
-move_recordings()
-print('======= Compressing and uploading '+yesterday_path+' =======')
-compress_recordings(yesterday_path)
-upload_recordings(yesterday_path)
-print('======= Compressing and uploading '+today_path+' =======')
-compress_recordings(today_path)
-upload_recordings(today_path)
+now = datetime.now()
+advance1hr = timedelta(hours=1)
+maxdifference = 24
+
+# first, ensure we have enough directories for coming recordings
+currenthour = now + advance1hr
+while currenthour < now + timedelta(hours=(maxdifference+1)):
+    newfolder = os.path.join(recording_path, currenthour.strftime('%Y'+os.sep+'%m'+os.sep+'%d'+os.sep+'%H'))
+    print('Making path %s' % newfolder)
+    if not os.path.exists(newfolder):
+        os.makedirs(newfolder)
+    currenthour = currenthour + advance1hr
+
+# once we have enough directories for new recordings, upload ones from the past 24hrs (usually we really only need to do 1hr)
+currenthour = now - timedelta(hours=maxdifference)
+while currenthour < datetime.now() - advance1hr:
+    path = os.path.join(recording_path, currenthour.strftime('%Y'+os.sep+'%m'+os.sep+'%d'+os.sep+'%H'))
+    print('======= Compressing and uploading %s =======' % path)
+    compress_recordings(path)
+    upload_recordings(path)
+    currenthour = currenthour + advance1hr
+
 print('======= Compressing and uploading complete =======')
 sleep(10)

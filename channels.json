@@ -103,17 +103,17 @@
     "audio": "Line 14 (Virtual Audio Cable)"
   },
   {
-    "name": "CPD Citywide 2",
+    "name": "CPD Citywide 5",
     "description": "",
-    "frequency": "460.175MHz",
-    "slug": "citywide2",
-    "audio": "Line 15 (Virtual Audio Cable)"
+    "frequency": "460.350MHz",
+    "slug": "citywide5",
+    "audio": "Line 17 (Virtual Audio Cable)"
   },
   {
     "name": "CPD Citywide 6",
     "description": "",
     "frequency": "460.250MHz",
     "slug": "citywide6",
-    "audio": "Line 16 (Virtual Audio Cable)"
+    "audio": "Line 18 (Virtual Audio Cable)"
   }
 ]
