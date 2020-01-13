@@ -12,12 +12,14 @@ from datetime import datetime
 onWindows = os.name == 'nt'
 
 if onWindows:
-    recordingPath = 'R:\\recordings'
+    recordingPath = 'C:\\Users\\Eric\\Documents\\ChicagoScanner\\recordings'
 else:
     recordingPath = '/mnt/hgfs/R/recordings'
     #recordingPath = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'recordings')
 
 def start_ffmpeg(channel, record=True, stream=False, broadcastify=False):
+    started = False
+
     ffmpeg_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'bin', 'ffmpeg') if os.name == 'nt' else '/usr/bin/ffmpeg'
     inputopts = [
         '-f', 'dshow' if onWindows else 'pulse',
@@ -58,6 +60,7 @@ def start_ffmpeg(channel, record=True, stream=False, broadcastify=False):
             else:
                 args = ['mate-terminal', '-t', '\'Record: %s\'' % channel['name'], '-e', '\'sh -c "' + ' '.join([ffmpeg_path] + inputopts + recordingopts) + '; sleep 15"\'']
                 subprocess.run(' '.join(args), shell=True, env=environment)
+            started = True
         else:
             print("Not starting recorder for %s as we already have a file at %s" % (channel['name'], current_recording_path))
 
@@ -83,21 +86,22 @@ def start_ffmpeg(channel, record=True, stream=False, broadcastify=False):
         #     'icecast://source:password@audio.crimeisdown.com:8001/' + channel['slug'] + '.ogg'
         # ]
         try:
-            # urllib.request.urlopen('http://audio.crimeisdown.com:8001/' + channel['slug'] + '.ogg')
             urllib.request.urlopen('https://audio.crimeisdown.com/streaming/dash/' + channel['slug'] + '/')
+            urllib.request.urlopen('https://audio.crimeisdown.com/streaming/dash/' + channel['slug'] + '/init.m4a')
             with urllib.request.urlopen('https://audio.crimeisdown.com/streaming/stat') as response:
                 if str(response.read()).find('<name>'+channel['slug']+'</name>') == -1:
                     raise Exception()
             print("Not starting stream for %s as it is already running" % channel['name'])
         except:
             if onWindows:
-                # args = ['taskkill', '/F', '/FI', 'WindowTitle eq Stream: ' + channel['name']]
-                # subprocess.run(args, shell=True)
+                args = ['taskkill', '/F', '/FI', 'WindowTitle eq Stream: ' + channel['name']]
+                subprocess.run(args, shell=True)
                 args = ['start', 'Stream: ' + channel['name'], ffmpeg_path] + inputopts + streamopts
                 subprocess.run(args, shell=True, env=environment)
             else:
                 args = ['mate-terminal', '-t', '\'Stream: %s\'' % channel['name'], '-e', '\'sh -c "' + ' '.join([ffmpeg_path] + inputopts + streamopts) + '; sleep 15"\'']
                 subprocess.run(' '.join(args), shell=True, env=environment)
+            started = True
 
     if broadcastify:
         if 'icecast_url' in channel:
@@ -119,6 +123,7 @@ def start_ffmpeg(channel, record=True, stream=False, broadcastify=False):
             else:
                 args = ['mate-terminal', '-t', '\'Broadcastify: %s\'' % channel['name'], '-e', '\'sh -c "' + ' '.join([ffmpeg_path] + inputopts + streamopts) + '; sleep 15"\'']
                 subprocess.run(' '.join(args), shell=True, env=environment)
+            started = True
 
     # args = ['start', 'Record/Stream: ' + channel['name'], ffmpeg_path] + inputopts + recordingopts + streamopts
     # subprocess.run(args, shell=True)
@@ -139,5 +144,5 @@ with open('channels.json') as channels_file:
     channels = json.load(channels_file)
     for channel in channels:
         if not singlestream or any(channel['slug'] == arg for arg in sys.argv):
-            start_ffmpeg(channel, record=record, stream=stream, broadcastify=broadcastify)
-            time.sleep(5)
+            if start_ffmpeg(channel, record=record, stream=stream, broadcastify=broadcastify):
+                time.sleep(5)

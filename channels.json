@@ -1,119 +1,138 @@
 [
   {
     "name": "CPD Zone 1 - Districts 16 and 17",
-    "description": "460.475MHz",
-    "frequency": "460.475MHz",
+    "description": "Covers the Far Northwest Side: Edison Park, Norwood Park, Dunning, Jefferson Park, Portage Park, Irving Park, Albany Park, North Park, Forest Glen, O'Hare (excluding airport)",
+    "frequency": "460475000",
     "slug": "zone1",
+    "openmhz": "https://openmhz.com/system/chi_cpd?filter-type=talkgroup&filter-code=1",
     "audio": "Line 1 (Virtual Audio Cable)"
   },
   {
     "name": "CPD Zone 2 - District 19",
-    "description": "19th District - Town Hall: Serving Uptown, south Lincoln Square, North Center, and Lakeview (including Boystown).",
-    "frequency": "460.050MHz",
+    "description": "Covers Uptown, south Lincoln Square, North Center, Lakeview (including Boystown), north Lincoln Park.",
+    "frequency": "460050000",
     "slug": "zone2",
+    "openmhz": "https://openmhz.com/system/chi_cpd?filter-type=talkgroup&filter-code=2",
     "audio": "Line 2 (Virtual Audio Cable)"
   },
   {
     "name": "CPD Zone 3 - Districts 12 and 14",
-    "description": "Near West Side, Wicker Park, Ukranian Village, West Town, Logan Square, Bucktown, UIC areas.",
-    "frequency": "460.225MHz",
+    "description": "Covers Pilsen, the Near West Side (incl. Greektown, UIC), West Town, Humboldt Park, Logan Square, Avondale.",
+    "frequency": "460225000",
     "slug": "zone3",
+    "openmhz": "https://openmhz.com/system/chi_cpd?filter-type=talkgroup&filter-code=3",
     "audio": "Line 3 (Virtual Audio Cable)"
   },
   {
     "name": "CPD Zone 4 - Districts 1 and 18",
-    "description": "1st District-Central..18th District-Near North.. Zone cover Downtown Chicago, Lake Shore Drive, Mag Mile, Navy Pier, Central Detention",
-    "frequency": "460.150MHz",
+    "description": "Covers downtown Chicago (The Loop), Near South Side (South Loop), Near North Side (River North, Mag Mile), south Lincoln Park",
+    "frequency": "460150000",
     "slug": "zone4",
-    "audio": "Line 4 (Virtual Audio Cable)",
-    "icecast_url": "icecast://source:PASSWORD@audio3..broadcastify.com:80/00g3yv7w49xc"
+    "openmhz": "https://openmhz.com/system/chi_cpd?filter-type=talkgroup&filter-code=4",
+    "audio": "Line 4 (Virtual Audio Cable)"
   },
   {
     "name": "CPD Zone 5 - District 2",
-    "description": "2nd District - Wentworth: Serving Douglas, Oakland, Grand Boulevard, Kenwood, Washington Park, and Hyde Park.",
-    "frequency": "460.500MHz",
+    "description": "Covers Douglas/Bronzeville, Oakland, Grand Boulevard, Kenwood, Washington Park, and Hyde Park.",
+    "frequency": "460500000",
     "slug": "zone5",
-    "audio": "Line 5 (Virtual Audio Cable)",
-    "icecast_url": "icecast://source:PASSWORD@audio1..broadcastify.com:80/khtxwn0r1v53"
+    "openmhz": "https://openmhz.com/system/chi_cpd?filter-type=talkgroup&filter-code=5",
+    "audio": "Line 5 (Virtual Audio Cable)"
   },
   {
     "name": "CPD Zone 6 - Districts 7 and 8",
-    "description": "7th District – Englewood & 8th District – Chicago Lawn",
-    "frequency": "460.400MHz",
+    "description": "Covers Englewood and West Englewood, Chicago Lawn, West Lawn, Ashburn, Archer Heights, West Elsdon, Garfield Ridge, and Clearing.",
+    "frequency": "460400000",
     "slug": "zone6",
-    "audio": "Line 6 (Virtual Audio Cable)",
-    "icecast_url": "icecast://source:PASSWORD@audio3..broadcastify.com:80/pf8swnvghx31"
+    "openmhz": "https://openmhz.com/system/chi_cpd?filter-type=talkgroup&filter-code=6",
+    "audio": "Line 6 (Virtual Audio Cable)"
   },
   {
     "name": "CPD Zone 7 - District 3",
-    "description": "Grand Crossing",
-    "frequency": "460.075MHz",
+    "description": "Covers Greater Grand Crossing, Woodlawn, and South Shore.",
+    "frequency": "460075000",
     "slug": "zone7",
+    "openmhz": "https://openmhz.com/system/chi_cpd?filter-type=talkgroup&filter-code=7",
     "audio": "Line 7 (Virtual Audio Cable)"
   },
   {
     "name": "CPD Zone 8 - Districts 4 and 6",
-    "description": "District 4 - South Chicago &amp; District 6 - Gresham.",
-    "frequency": "460.200MHz",
+    "description": "Covers the far East Side / Southeast Side, South Deering, Hegewisch, South Chicago, Avalon Park, Calumet Heights, Chatham, Burnside, and Auburn Gresham.",
+    "frequency": "460200000",
     "slug": "zone8",
+    "openmhz": "https://openmhz.com/system/chi_cpd?filter-type=talkgroup&filter-code=8",
     "audio": "Line 8 (Virtual Audio Cable)"
   },
   {
     "name": "CPD Zone 9 - Districts 5 and 22",
-    "description": "5th District.. Calumet / Area South.. 22nd District  Morgan Park",
-    "frequency": "460.025MHz",
+    "description": "Covers Roseland, Pullman, West Pullman, Riverdale, Morgan Park, Beverly, and Washington Heights.",
+    "frequency": "460025000",
     "slug": "zone9",
+    "openmhz": "https://openmhz.com/system/chi_cpd?filter-type=talkgroup&filter-code=9",
     "audio": "Line 9 (Virtual Audio Cable)"
   },
   {
     "name": "CPD Zone 10 - Districts 10 and 11",
-    "description": "10th District - Ogden: Serving North Lawndale, South Lawndale, and the Lower West Side; 11th District - Harrison: Serving West Garfield Park, East Garfield Park, and the southern half of Humboldt Park.",
-    "frequency": "460.100MHz",
+    "description": "Covers part of the west side of Chicago, including North Lawndale, South Lawndale, the Lower West Side, West Garfield Park, East Garfield Park, and southwest of Humboldt Park.",
+    "frequency": "460100000",
     "slug": "zone10",
-    "audio": "Line 10 (Virtual Audio Cable)",
-    "icecast_url": "icecast://source:PASSWORD@audio9..broadcastify.com:80/716183595"
+    "openmhz": "https://openmhz.com/system/chi_cpd?filter-type=talkgroup&filter-code=10",
+    "audio": "Line 10 (Virtual Audio Cable)"
   },
   {
     "name": "CPD Zone 11 - Districts 20 and 24",
     "description": "Dist. 20 and 24, serving the far North side of Chicago, including community areas of Rodgers Park, West Ridge, and Edgewater",
-    "frequency": "460.375MHz",
+    "frequency": "460375000",
     "slug": "zone11",
+    "openmhz": "https://openmhz.com/system/chi_cpd?filter-type=talkgroup&filter-code=11",
     "audio": "Line 11 (Virtual Audio Cable)"
   },
   {
     "name": "CPD Zone 12 - Districts 15 and 25",
-    "description": "Dist. 15 and 25, serving the far West side of Chicago, including community areas of Austin, Hermosa, and Belmont Cragin.",
-    "frequency": "460.425MHz",
+    "description": "Covers the far west side of Chicago, including Austin, Belmont Cragin, Hermosa, and Montclare.",
+    "frequency": "460425000",
     "slug": "zone12",
+    "openmhz": "https://openmhz.com/system/chi_cpd?filter-type=talkgroup&filter-code=12",
     "audio": "Line 12 (Virtual Audio Cable)"
   },
   {
     "name": "CPD Zone 13 - District 9",
-    "description": "9th District - Deering: Serving Bridgeport, McKinley Park, Brighton Park, New City, and Gage Park.",
-    "frequency": "460.450MHz",
+    "description": "Covers Armour Square (incl. Chinatown), Bridgeport, McKinley Park, Brighton Park, Back of the Yards/New City, Gage Park.",
+    "frequency": "460450000",
     "slug": "zone13",
-    "audio": "Line 13 (Virtual Audio Cable)",
-    "icecast_url": "icecast://source:PASSWORD@audio9..broadcastify.com:80/539709865"
+    "openmhz": "https://openmhz.com/system/chi_cpd?filter-type=talkgroup&filter-code=13",
+    "audio": "Line 13 (Virtual Audio Cable)"
   },
   {
     "name": "CPD Citywide 1",
-    "description": "",
-    "frequency": "460.125MHz",
+    "description": "Handles units assigned to K9, SWAT, Marine and Helicopter Unit, Mass Transit Unit, Traffic Enforcement (Lake Shore Drive and Skyway), and other citywide units.",
+    "frequency": "460125000",
     "slug": "citywide1",
+    "openmhz": "https://openmhz.com/system/chi_cpd?filter-type=talkgroup&filter-code=14",
     "audio": "Line 14 (Virtual Audio Cable)"
   },
   {
+    "name": "CPD Citywide 2",
+    "description": "Handles evidence technician, crime lab, and body removal requests.",
+    "frequency": "460175000",
+    "slug": "citywide2",
+    "openmhz": "https://openmhz.com/system/chi_cpd?filter-type=talkgroup&filter-code=15",
+    "audio": "Line 15 (Virtual Audio Cable)"
+  },
+  {
     "name": "CPD Citywide 5",
-    "description": "",
-    "frequency": "460.350MHz",
+    "description": "Used by mass transit units operating in the subway, as well as as a channel for major/special events.",
+    "frequency": "460350000",
     "slug": "citywide5",
+    "openmhz": "https://openmhz.com/system/chi_cpd?filter-type=talkgroup&filter-code=17",
     "audio": "Line 17 (Virtual Audio Cable)"
   },
   {
     "name": "CPD Citywide 6",
-    "description": "",
-    "frequency": "460.250MHz",
+    "description": "Channel for major/special events - marathon, parades, etc, or SWAT/HBT incidents",
+    "frequency": "460250000",
     "slug": "citywide6",
+    "openmhz": "https://openmhz.com/system/chi_cpd?filter-type=talkgroup&filter-code=18",
     "audio": "Line 18 (Virtual Audio Cable)"
   }
 ]

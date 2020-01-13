@@ -68,7 +68,7 @@ def upload_recordings(path):
     subprocess.run(rclone_args, shell=True)
 
 
-recording_path = 'R:\\recordings'
+recording_path = 'C:\\Users\\Eric\\Documents\\ChicagoScanner\\recordings'
 
 now = datetime.now()
 advance1hr = timedelta(hours=1)
